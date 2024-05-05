@@ -1,33 +1,16 @@
-Q1. DOM Q6: Movie Filter
-Attempted
-feature icon
-Using hints except Complete Solution is Penalty free now
-Use Hint
-Raw Problem
-Write a script using JavaScript to make the filter work.
+Sure, here are the problem statements along with the solutions:
 
-The filter has 4 categories: none, Action, Romance, Comedy
-Each movie card is a div with an h3 and p element.
-The p element has a data-category attribute that holds the information about the category of the movie.
-Use the value of this data-category attribute to filter the movies based on the selected category from the drop-down menu.
+**Q1. DOM Q6: Movie Filter**
 
-NOTE:
-If the category is selected as 'none', show all the movies.
-To hide a movie card, change the style->display property of the div to 'none'.
-To show a movie card, change the style->display property of the div to 'block'.
+Problem:
+Write a script using JavaScript to make the filter work. The filter has 4 categories: none, Action, Romance, Comedy. Each movie card is a div with an h3 and p element. The p element has a data-category attribute that holds the information about the category of the movie. Use the value of this data-category attribute to filter the movies based on the selected category from the drop-down menu.
 
+Solution:
+
+```html
+<!-- HTML code -->
 <!DOCTYPE html>
 <html>
-<!-- Please NOTE that the link to assets (like images) need to be set in global context.
-For example:
-To access an image from assets folder correct way to set src attribute is 
-
-src = 'profile.png'
-
-instead of 
-
-src = './assets/profile.png'
--->
 
 <head>
     <meta charset="UTF-8" />
@@ -35,207 +18,64 @@ src = './assets/profile.png'
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding-top: 5rem;
-        }
-
-        .movies {
-            height: 10rem;
-            width: 10rem;
-            margin: 2rem;
-        }
-
-        .price {
-            background-color: rgb(247 84 33);
-            height: 8rem;
-            padding: 1.5rem;
-            font-size: 2rem;
-        }
-
-        .heading {
-            background-color: rgba(0, 0, 0, 0.856);
-            height: 2rem;
-        }
-
-        .heading,
-        .price {
-            color: white;
-            text-align: center;
-            margin: 0;
-        }
-
-        select,
-        h1 {
-            position: fixed;
-        }
-
-        h1 {
-            top: 0px;
-        }
-
-        select {
-            width: 8rem;
-        }
+        /* CSS styles */
+        /* Styles remain the same */
     </style>
 </head>
 
 <body>
-    <h1>BOOK MY SHOW</h1>
-    <select>
-        <option value="none">None</option>
-        <option value="action">Action</option>
-        <option value="romance">Romance</option>
-        <option value="comedy">Comedy</option>
-    </select>
-
-    <div class="movies">
-        <h3 class="heading">Example-1 action</h3>
-        <p class="price" data-category="action">Rs. 100</p>
-    </div>
-    <div class="movies">
-        <h3 class="heading">Example-2 action</h3>
-        <p class="price" data-category="action">Rs 200</p>
-    </div>
-    <div class="movies">
-        <h3 class="heading">Example-3 action</h3>
-        <p class="price" data-category="action">Rs. 150</p>
-    </div>
-    <div class="movies">
-        <h3 class="heading">Example-4 romance</h3>
-        <p class="price" data-category="romance">Rs 200</p>
-    </div>
-    <div class="movies">
-        <h3 class="heading">Example-5 romance</h3>
-        <p class="price" data-category="romance">Rs. 150</p>
-    </div>
-    <div class="movies">
-        <h3 class="heading">Example-6 romance</h3>
-        <p class="price" data-category="romance">Rs. 150</p>
-    </div>
-    <div class="movies">
-        <h3 class="heading">Example-7 action</h3>
-        <p class="price" data-category="action">Rs 200</p>
-    </div>
-    <div class="movies">
-        <h3 class="heading">Example-8 comedy</h3>
-        <p class="price" data-category="comedy">Rs. 100</p>
-    </div>
-    <div class="movies">
-        <h3 class="heading">Example-9 romance</h3>
-        <p class="price" data-category="romance">Rs. 100</p>
-    </div>
-    <div class="movies">
-        <h3 class="heading">Example-10 comedy</h3>
-        <p class="price" data-category="comedy">Rs 200</p>
-    </div>
-
+    <!-- HTML code remains the same -->
 </body>
+
 <script>
-    // Write your JS program here ====
+    // JavaScript code
+    // Select the dropdown menu element
     const select = document.querySelector('select');
-    select.addEventListener('change' , function () {
-    
-    const selectedCategory = this.value;
-    
-    const movies = document.querySelectorAll('.movies');
-    movies.forEach(movie => {
 
-    const category = movie.querySelector('.price').getAttribute('data-category');
-    if (selectedCategory === 'none' || selectedCategory === category){
+    // Add an event listener for the 'change' event on the dropdown menu
+    select.addEventListener('change', function () {
 
-    movie.style.display = 'block';
+        // Get the value of the selected category from the dropdown menu
+        const selectedCategory = this.value;
 
-    } else {
-    movie.style.display = 'none';
-    }
+        // Select all movie cards
+        const movies = document.querySelectorAll('.movies');
+
+        // Iterate over each movie card
+        movies.forEach(movie => {
+
+            // Get the category of the current movie card
+            const category = movie.querySelector('.price').getAttribute('data-category');
+
+            // Check if the selected category matches the category of the current movie card
+            if (selectedCategory === 'none' || selectedCategory === category) {
+
+                // Display the movie card
+                movie.style.display = 'block';
+            } else {
+                // Hide the movie card
+                movie.style.display = 'none';
+            }
+        });
     });
-    });
-
 </script>
+
 </html>
+```
 
+**Q2. DOM Q9: Fix the alert**
 
-
-
-// Select the dropdown menu element
-const select = document.querySelector('select');
-
-// Add an event listener for the 'change' event on the dropdown menu
-select.addEventListener('change', function () {
-
-    // Get the value of the selected category from the dropdown menu
-    const selectedCategory = this.value;
-
-    // Select all movie cards
-    const movies = document.querySelectorAll('.movies');
-
-    // Iterate over each movie card
-    movies.forEach(movie => {
-
-        // Get the category of the current movie card
-        const category = movie.querySelector('.price').getAttribute('data-category');
-
-        // Check if the selected category matches the category of the current movie card
-        if (selectedCategory === 'none' || selectedCategory === category) {
-
-            // Display the movie card
-            movie.style.display = 'block';
-        } else {
-            // Hide the movie card
-            movie.style.display = 'none';
-        }
-    });
-});
-
-
-
-
-
-
-
-
-
-Q2. DOM Q9: Fix the alert
-Unsolved
-feature icon
-Using hints except Complete Solution is Penalty free now
-Use Hint
-Raw Problem
-The given JS code is broken. This is because:
-
-Even when yellow box is clicked, it is alerted that red is clicked.
-
-
-
-Fix the code such that:
-
-1. It alerts as 'yellow is clicked' when yellow box is clicked.
-
+Problem:
+The given JS code is broken. Even when the yellow box is clicked, it is alerted that the red box is clicked. Fix the code such that:
+1. It alerts as 'yellow is clicked' when the yellow box is clicked.
 2. and alerts as 'red is clicked' when the red box is clicked.
+3. A single alert is generated when any of the boxes is clicked.
 
-3. A single alert is generated when any of the box is clicked.
+Solution:
 
-
-
+```html
 <!DOCTYPE html>
 <html>
-<!-- Please NOTE that the link to assets (like images) need to be set in global context.
-For example:
-To access an image from assets folder correct way to set src attribute is 
-
-src = 'profile.png'
-
-instead of 
-
-src = './assets/profile.png'
--->
 
 <head>
     <meta charset="UTF-8" />
@@ -243,155 +83,52 @@ src = './assets/profile.png'
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        div {
-            border: 1px solid;
-        }
-
-        .red {
-            padding: 2rem;
-            height: 20rem;
-            width: 20rem;
-            background-color: red;
-        }
-
-        .yellow {
-            height: 10rem;
-            width: 10rem;
-            margin: auto;
-            background-color: yellow;
-            margin-top: 5rem;
-        }
+        /* CSS styles */
+        /* Styles remain the same */
     </style>
 </head>
 
 <body>
-    <div class="red">
-        <div class="yellow"></div>
-    </div>
-
-    <script>
-        //Q The following code is broken. Even when clicked on yellow,
-        //its alerted that red is clicked. Fix it
-
-        let red = document.querySelector(".red");
-
-        red.addEventListener('click', (e) => {
-            window.alert('red is clicked');
-        })
-    </script>
+    <!-- HTML code remains the same -->
 </body>
-
-</html>
-
-
-
 
 <script>
-        // Select both red and yellow elements
-        let red = document.querySelector(".red");
-        let yellow = document.querySelector(".yellow");
+    // JavaScript code
+    // Select both red and yellow elements
+    let red = document.querySelector(".red");
+    let yellow = document.querySelector(".yellow");
 
-        // Add click event listener to red box
-        red.addEventListener('click', (e) => {
-            // Prevent the click event from bubbling up to the parent elements
-            e.stopPropagation();
-            window.alert('red is clicked');
-        })
+    // Add click event listener to red box
+    red.addEventListener('click', (e) => {
+        // Prevent the click event from bubbling up to the parent elements
+        e.stopPropagation();
+        window.alert('red is clicked');
+    })
 
-        // Add click event listener to yellow box
-        yellow.addEventListener('click', (e) => {
-            // Prevent the click event from bubbling up to the parent elements
-            e.stopPropagation();
-            window.alert('yellow is clicked');
-        })
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Additional Problem
-
-Q1. DOM Q10: Delete Buttons
-Unsolved
-feature icon
-Using hints except Complete Solution is Penalty free now
-Use Hint
-Raw Problem
-In the HTML provided, there is a list with every item containing an individual delete button and a remove all button on top of the list.
-
-Write a JavaScript program that performs the following tasks:
-
-Task 1:
-Make all the individual delete buttons work.
-Set the list item's (li element) display style property as 'none'.
-
-Task 2:
-Make the Remove All button work.
-Set the entire list's (ul element) display style property as 'none'.
-
-
-<!DOCTYPE html>
-<html>
-<!-- Please NOTE that the link to assets (like images) need to be set in global context.
-For example:
-To access an image from assets folder correct way to set src attribute is 
-
-src = 'profile.png'
-
-instead of 
-
-src = './assets/profile.png'
--->
-
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-</head>
-
-<body>
-    <button id="all">Remove All</button>
-    <ul>
-        <li>
-            <p>Task - 1</p>
-            <button>delete</button>
-        </li>
-        <li>
-            <p>Task - 2</p>
-            <button>delete</button>
-        </li>
-        <li>
-            <p>Task - 3</p>
-            <button>delete</button>
-        </li>
-        <li>
-            <p>Task - 4</p>
-            <button>delete</button>
-        </li>
-    </ul>
-    <script>
-        // Write your JS program here =========
-    </script>
-</body>
+    // Add click event listener to yellow box
+    yellow.addEventListener('click', (e) => {
+        // Prevent the click event from bubbling up to the parent elements
+        e.stopPropagation();
+        window.alert('yellow is clicked');
+    })
+</script>
 
 </html>
+```
 
+**Additional Problem: Q1. DOM Q10: Delete Buttons**
 
+Problem:
+In the HTML provided, there is a list with every item containing an individual delete button and a remove all button on top of the list. Write a JavaScript program that performs the following tasks:
+1. Make all the individual delete buttons work. Set the list item's (li element) display style property as 'none'.
+2. Make the Remove All button work. Set the entire list's (ul element) display style property as 'none'.
 
+Solution:
 
+```html
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -420,20 +157,28 @@ src = './assets/profile.png'
         </li>
     </ul>
     <script>
-        // Write your JS program here =========
+        // JavaScript code
+        // Select all delete buttons
         const deleteButtons = document.querySelectorAll('.delete-btn');
 
+        // Add event listeners to delete buttons
         deleteButtons.forEach(button => {
             button.addEventListener('click', () => {
+                // Hide the corresponding list item when delete button is clicked
                 button.parentNode.style.display = 'none';
             });
         });
 
+        // Select the Remove All button
         const removeAllButton = document.getElementById('all');
+
+        // Add event listener to Remove All button
         removeAllButton.addEventListener('click', () => {
+            // Hide the entire list when Remove All button is clicked
             document.querySelector('ul').style.display = 'none';
         });
     </script>
 </body>
 
 </html>
+```
