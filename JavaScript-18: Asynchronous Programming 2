@@ -1,0 +1,248 @@
+console.log(1); setTimeout(() => console.log(2), 0); console.log(3);
+Q1. Async JS Output? MCQ 1
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+What is the output of the following code?
+
+
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+1 2 3
+1 3 2
+2 1 3
+1 3
+ChatGPT
+The output of the code will be:
+
+Copy code
+1
+3
+2
+Explanation:
+
+console.log(1) prints 1.
+setTimeout(() => console.log(2), 0) schedules the printing of 2 to happen after the current synchronous code execution completes, so it goes to the event queue.
+console.log(3) prints 3.
+Event loop picks up the function from the event queue and prints 2.
+User
+async function getData() { return await Promise.resolve('Hello'); } console.log(getData());         Q2. Async JS Output? MCQ 2
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+What is the output of the following code?
+
+img
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+Promise {<pending>}
+Hello
+undefined
+Error
+ChatGPT
+The output of the code will be:
+
+javascript
+Copy code
+Promise {<pending>}
+Explanation:
+
+getData() returns a Promise that resolves with the string 'Hello'.
+When console.log(getData()) is called, it logs the Promise object itself, which is in a pending state because it hasn't resolved yet.
+User
+need more detailed explanation
+ChatGPT
+Certainly! Let's break it down:
+
+The getData() function is declared as an asynchronous function, using the async keyword. This means it will always return a Promise, no matter what it contains.
+Inside getData(), there is await Promise.resolve('Hello'). This resolves immediately with the string 'Hello', but because it's wrapped in an await, the function pauses until the Promise resolves.
+However, since the function immediately returns the awaited Promise, getData() itself returns a Promise.
+When you call console.log(getData()), it logs the Promise object returned by getData().
+At this moment, the Promise is in a pending state because it's waiting for the asynchronous operation to complete.
+So, the output you see is Promise {<pending>}.
+So, the output indicates that a Promise is pending, awaiting resolution. The actual value of the Promise, which is 'Hello', will be logged when the Promise resolves.
+
+User
+async function fetchData() { } throw new Error('Error occurred'); fetchData().catch((error) => console.log(error.message)); Q3. Async JS Output? MCQ 3
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+What is the output of the following code?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+Error occurred
+Uncaught Error: Error occurred
+undefined
+Error
+ChatGPT
+The output of the code will be:
+
+javascript
+Copy code
+Error occurred
+Explanation:
+
+The fetchData() function doesn't contain any code inside its body.
+Immediately after the function definition, throw new Error('Error occurred'); throws an error with the message 'Error occurred'.
+Since there is no code in fetchData(), it immediately returns a Promise that resolves with an undefined value.
+The catch block attached to the Promise returned by fetchData() catches the thrown error and logs its message, which is 'Error occurred'.
+User
+async function processArray(array) { } const results = []; for (const item of array) { } const processedItem = await processItem(item); results.push(processedItem); return results; const data = [1, 2, 3]; console.log(processArray(data));                        Q4. Async JS Output? MCQ 4
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+What is the output of the following code?
+
+img
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+Promise {<pending>}
+[1, 2, 3]
+[Promise {<pending>}]
+Error          explain the code line by line along with answer
+ChatGPT
+Let's break down the code line by line:
+
+javascript
+Copy code
+async function processArray(array) { 
+    const results = [];
+    for (const item of array) {
+        const processedItem = await processItem(item); // Assuming processItem function exists
+        results.push(processedItem);
+    }
+    return results;
+}
+
+const data = [1, 2, 3];
+console.log(processArray(data));
+async function processArray(array) { }: This declares an asynchronous function processArray that takes an array as an argument.
+const results = [];: Initializes an empty array results.
+for (const item of array) { }: Loops through each item of the input array.
+const processedItem = await processItem(item);: This line awaits the result of processing each item using the processItem function (which should be defined elsewhere in the code). It waits for each asynchronous operation to complete before moving to the next item.
+results.push(processedItem);: Adds the processed item to the results array.
+return results;: Returns the results array once all items have been processed.
+const data = [1, 2, 3];: Defines an array data with values [1, 2, 3].
+console.log(processArray(data));: Calls the processArray function with data array and logs the returned value.
+Now, let's analyze the output:
+
+Since processArray is an asynchronous function and contains await, it returns a Promise that resolves to the value returned by the function.
+The function waits for each item to be processed, so it returns a Promise that resolves with the array containing the processed items.
+However, it doesn't directly log the processed array, instead, it logs the Promise object representing the asynchronous operation.
+So, the output will be:
+
+javascript
+Copy code
+Promise {<pending>}
+Explanation: The output is a pending Promise because processArray(data) returns a Promise that is pending until all the items in the data array are processed.
+
+User
+ad explanation in comment before every line
+ChatGPT
+javascript
+Copy code
+// Declares an asynchronous function named processArray which takes an array as an argument
+async function processArray(array) { 
+    // Initializes an empty array results
+    const results = [];
+    // Loops through each item of the input array
+    for (const item of array) {
+        // Waits for the result of processing each item using the processItem function
+        const processedItem = await processItem(item); // Assuming processItem function exists
+        // Adds the processed item to the results array
+        results.push(processedItem);
+    }
+    // Returns the results array once all items have been processed
+    return results;
+}
+
+// Defines an array data with values [1, 2, 3]
+const data = [1, 2, 3];
+// Calls the processArray function with data array and logs the returned value
+console.log(processArray(data));
+Explanation:
+
+The function processArray is declared as asynchronous and takes an array as an argument.
+An empty array results is initialized to store the processed items.
+A loop iterates over each item in the input array.
+Inside the loop, await is used to wait for each item to be processed using the processItem function.
+Processed items are then added to the results array.
+Once all items are processed, the results array is returned.
+Finally, the processArray function is called with the data array, and the returned value is logged.
+User
+which is correct then for following code  Promise {<pending>}
+[1, 2, 3]
+[Promise {<pending>}]
+Error  
+ChatGPT
+The correct output for the following code is:
+
+javascript
+Copy code
+Promise {<pending>}
+Explanation:
+
+The function processArray is asynchronous and contains an await, so it returns a Promise.
+When processArray(data) is called, it returns a Promise that is pending until all items in the data array are processed.
+Therefore, the output is Promise {<pending>} indicating that a Promise is pending.
+User
+function fetchData() { } return new Promise((resolve) => { setTimeout(() => resolve('Data'), 1000); }); async function logData() { const result = await fetchData(); console.log(result); } logData(); console.log('End');                                                       Q5. Async JS Output? MCQ 5
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+What is the output of the following code?
+
+img
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+End Data
+Data End
+Data
+End
+ChatGPT
+Let's break down the code:
+
+javascript
+Copy code
+function fetchData() { 
+    return new Promise((resolve) => {
+        setTimeout(() => resolve('Data'), 1000);
+    });
+}
+
+async function logData() { 
+    const result = await fetchData(); 
+    console.log(result); 
+}
+
+logData(); 
+console.log('End');
+fetchData() is a function that returns a Promise. Inside the Promise constructor, there's a setTimeout function that resolves the Promise with the string 'Data' after 1000 milliseconds.
+logData() is an asynchronous function. It awaits the result of fetchData() and then logs the result.
+logData() is called, triggering the asynchronous operation.
+console.log('End') is outside the logData() function, so it runs immediately after logData() is called.
+Now, let's analyze the output:
+
+logData() is an asynchronous function, so it won't block the execution of subsequent code.
+It waits for fetchData() to resolve before logging the result.
+The output will be:
+
+mathematica
+Copy code
+End
+Data
+Explanation:
+
+console.log('End') is executed first because it's synchronous.
+Then, logData() is called, which starts the asynchronous operation.
+After one second (setTimeout delay), the result of fetchData() is logged, which is 'Data'.
