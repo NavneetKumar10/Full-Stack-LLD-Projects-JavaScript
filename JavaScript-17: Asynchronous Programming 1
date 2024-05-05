@@ -1,0 +1,589 @@
+Q1. Async JS 1: Declaring async function
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+Which keyword is used to declare an asynchronous function in JavaScript?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+sync
+async
+await
+promise
+
+ChatGPT
+The correct keyword used to declare an asynchronous function in JavaScript is "async". So, the answer is:
+
+async
+
+User
+also explain each question
+ChatGPT
+Sure, let's break down each question:
+
+Q1. Async JS 1: Declaring async function
+
+Question: Which keyword is used to declare an asynchronous function in JavaScript?
+
+Options:
+
+sync
+async
+await
+promise
+Explanation:
+
+sync: This is not a keyword used for asynchronous operations. It suggests synchronous behavior.
+async: This is the correct keyword used to declare an asynchronous function in JavaScript. Functions declared with the async keyword return a promise implicitly.
+await: This keyword is used inside an async function to pause execution until a promise is resolved.
+promise: This is a JavaScript object used for asynchronous operations, but it's not a keyword used to declare an asynchronous function.
+So, the correct answer is async.
+
+Let me know if you need more explanation on any part!
+
+User
+Q2. Async JS 1: Creating resolved promise
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+Which method is used to explicitly create a resolved promise in JavaScript?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+Promise.reject()
+Promise.resolve()
+Promise.all()
+Promise.race()
+ChatGPT
+Let's break down this question:
+
+Q2. Async JS 1: Creating resolved promise
+
+Question: Which method is used to explicitly create a resolved promise in JavaScript?
+
+Options:
+
+Promise.reject()
+Promise.resolve()
+Promise.all()
+Promise.race()
+Explanation:
+
+Promise.reject(): This method is used to explicitly create a rejected promise.
+Promise.resolve(): This method is used to explicitly create a resolved promise.
+Promise.all(): This method is used to combine multiple promises into a single promise that resolves when all of the input promises have resolved.
+Promise.race(): This method is used to race multiple promises against each other, returning the first one that resolves or rejects.
+So, the correct answer is Promise.resolve().
+
+Let me know if you need further clarification!
+
+User
+Q3. Async JS 1: Catching errors
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+Which method is used to catch errors in an asynchronous function?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+try-catch statement
+catch() method
+then() method
+finally() method
+ChatGPT
+Let's dissect this question:
+
+Q3. Async JS 1: Catching errors
+
+Question: Which method is used to catch errors in an asynchronous function?
+
+Options:
+
+try-catch statement
+catch() method
+then() method
+finally() method
+Explanation:
+
+try-catch statement: This is a control flow statement for handling exceptions. It's used to catch errors in synchronous code. However, it doesn't directly handle asynchronous errors.
+catch() method: This method is used to handle errors in promises. It's used in conjunction with the then() method to handle both successful and failed promises.
+then() method: This method is used to handle the resolved value of a promise. While it can handle errors using the second argument of then(), it's not specifically for catching errors.
+finally() method: This method is used to execute code after a promise is settled (either resolved or rejected), regardless of its outcome. It's not primarily used for catching errors.
+So, the correct answer is catch() method.
+
+Let me know if you need further clarification!
+
+User
+Q4. Async JS 1: Awaiting promise
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+Which operator is used to await a promise inside an async function?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+&& operator
+|| operator
++ operator
+await operator
+ChatGPT
+Here's a breakdown of the question:
+
+Q4. Async JS 1: Awaiting promise
+
+Question: Which operator is used to await a promise inside an async function?
+
+Options:
+
+&& operator
+|| operator
++ operator
+await operator
+Explanation:
+
+&& operator: This is the logical AND operator used for boolean operations. It is not used to await promises.
+|| operator: This is the logical OR operator used for boolean operations. It is not used to await promises.
++ operator: This is the addition operator used for arithmetic operations. It is not used to await promises.
+await operator: This is the correct operator used to pause execution within an async function until a promise is settled (resolved or rejected).
+So, the correct answer is await operator.
+
+Let me know if you have further questions!
+
+User
+Q5. Async JS 1: Delay in execution
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+Which method is used to delay the execution of code in JavaScript?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+setTimeout()
+setInterval()
+setImmediate()
+clearTimeout()
+ChatGPT
+Let's break down this question:
+
+Q5. Async JS 1: Delay in execution
+
+Question: Which method is used to delay the execution of code in JavaScript?
+
+Options:
+
+setTimeout()
+setInterval()
+setImmediate()
+clearTimeout()
+Explanation:
+
+setTimeout(): This method is used to execute a function or an expression after a specified delay (in milliseconds).
+setInterval(): This method is used to repeatedly execute a function or an expression at specified intervals (in milliseconds).
+setImmediate(): This method is used to execute a function asynchronously, after the current event loop cycle.
+clearTimeout(): This method is used to cancel a timeout set with setTimeout().
+So, the correct answer is setTimeout().
+
+Let me know if you need further clarification!
+
+User
+Q6. Async JS 1: Promise.all()
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+What does the "Promise.all()" method do?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+Executes multiple promises in parallel and returns a new promise that resolves when all promises are resolved.
+Executes multiple promises in parallel and returns a new promise that resolves when any promise is resolved.
+Executes multiple promises in sequence and returns a new promise that resolves when all promises are resolved.
+Executes multiple promises in sequence and returns a new promise that resolves when any promise is resolved.
+ChatGPT
+Let's break down this question:
+
+Q6. Async JS 1: Promise.all()
+
+Question: What does the "Promise.all()" method do?
+
+Options:
+
+Executes multiple promises in parallel and returns a new promise that resolves when all promises are resolved.
+Executes multiple promises in parallel and returns a new promise that resolves when any promise is resolved.
+Executes multiple promises in sequence and returns a new promise that resolves when all promises are resolved.
+Executes multiple promises in sequence and returns a new promise that resolves when any promise is resolved.
+Explanation:
+
+Option 1: This is the correct description of Promise.all(). It executes multiple promises in parallel and returns a new promise that resolves when all promises are resolved.
+Option 2: This is incorrect. Promise.all() waits for all promises to resolve, not just any one of them.
+Option 3: This describes a different behavior. Promise.all() executes promises concurrently, not sequentially.
+Option 4: This is also incorrect. Promise.all() waits for all promises to resolve, not just any one of them.
+So, the correct answer is Executes multiple promises in parallel and returns a new promise that resolves when all promises are resolved.
+
+Let me know if you need further clarification!
+
+User
+Q7. Async JS 1: Chain async Operations
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+Which method is used to chain multiple asynchronous operations together in JavaScript?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+then()
+catch()
+finally()
+all()
+ChatGPT
+Let's analyze the question:
+
+Q7. Async JS 1: Chain async Operations
+
+Question: Which method is used to chain multiple asynchronous operations together in JavaScript?
+
+Options:
+
+then()
+catch()
+finally()
+all()
+Explanation:
+
+then(): This method is used to chain asynchronous operations together and handle the resolved value of a promise.
+catch(): This method is used to handle errors in promises, not specifically for chaining operations.
+finally(): This method is used to execute code after a promise is settled, regardless of its outcome, not for chaining operations.
+all(): There's no native method called all() for chaining asynchronous operations in JavaScript.
+So, the correct answer is then().
+
+Let me know if you have further questions!
+
+User
+Q1. Async JS 1: Cleanup Operations
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+Which method is used to handle cleanup operations after a promise settles?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+then()
+catch()
+finally()
+all()
+ChatGPT
+Let's break down the question:
+
+Q1. Async JS 1: Cleanup Operations
+
+Question: Which method is used to handle cleanup operations after a promise settles?
+
+Options:
+
+then()
+catch()
+finally()
+all()
+Explanation:
+
+then(): This method is used to handle the resolved value of a promise but is not specifically for cleanup operations.
+catch(): This method is used to handle errors in promises, not for cleanup operations.
+finally(): This method is used to execute code after a promise is settled, regardless of its outcome. It's typically used for cleanup operations.
+all(): There's no native method called all() for cleanup operations in JavaScript promises.
+So, the correct answer is finally().
+
+Let me know if you need further clarification!
+
+User
+Q2. Async JS 1: Purpose of 'async/await'
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+What is the purpose of the "async/await" syntax in JavaScript?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+To make asynchronous code synchronous.
+To make synchronous code asynchronous.
+To handle errors in asynchronous code.
+To handle errors in synchronous code.
+ChatGPT
+Let's break down the question:
+
+Q2. Async JS 1: Purpose of 'async/await'
+
+Question: What is the purpose of the "async/await" syntax in JavaScript?
+
+Options:
+
+To make asynchronous code synchronous.
+To make synchronous code asynchronous.
+To handle errors in asynchronous code.
+To handle errors in synchronous code.
+Explanation:
+
+Option 1: Incorrect. The purpose of async/await is not to make asynchronous code synchronous, but rather to make it easier to write and understand asynchronous code in a synchronous style.
+Option 2: Correct. The purpose of async/await is to make synchronous code asynchronous, allowing it to wait for asynchronous operations to complete without blocking.
+Option 3: Incorrect. While async/await can be used to handle errors in asynchronous code, it's not its primary purpose.
+Option 4: Incorrect. async/await is primarily used for asynchronous code, not synchronous code.
+So, the correct answer is To make synchronous code asynchronous.
+
+Let me know if you need further clarification!
+
+User
+to make asynchronous synchronous Explanation: The “async/await” syntax in JavaScript is used to make asynchronous code appear and behave more like synchronous code. It allows developers to write asynchronous code in a more sequential and readable manner.
+ChatGPT
+That's a great clarification!
+
+Explanation: The “async/await” syntax in JavaScript is used to make asynchronous code appear and behave more like synchronous code. It allows developers to write asynchronous code in a more sequential and readable manner. With async/await, asynchronous operations can be written in a way that looks like traditional synchronous code, making it easier to understand and maintain. By using the async keyword, functions return promises implicitly, and the await keyword allows the code to pause and wait for promises to resolve, effectively making asynchronous code flow in a more synchronous manner.
+
+Let me know if you need any more information!
+
+User
+Q3. Async JS 1: Advantage of promises
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+What is the advantage of using promises in asynchronous JavaScript code?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+Promises simplify error handling in asynchronous code.
+Promises automatically handle memory management in asynchronous code.
+Promises improve performance in asynchronous code.
+Promises eliminate the need for callbacks in asynchronous code.
+ChatGPT
+Let's analyze the question:
+
+Q3. Async JS 1: Advantage of promises
+
+Question: What is the advantage of using promises in asynchronous JavaScript code?
+
+Options:
+
+Promises simplify error handling in asynchronous code.
+Promises automatically handle memory management in asynchronous code.
+Promises improve performance in asynchronous code.
+Promises eliminate the need for callbacks in asynchronous code.
+Explanation:
+
+Option 1: Correct. Promises simplify error handling in asynchronous code by allowing you to chain .then() and .catch() methods to handle success and error cases separately, making error handling more straightforward compared to traditional callback-based approaches.
+Option 2: Incorrect. Promises do not automatically handle memory management. Memory management in JavaScript is handled by the JavaScript engine itself and is not directly related to promises.
+Option 3: Incorrect. Promises themselves do not necessarily improve performance in asynchronous code. However, they can improve code readability and maintainability.
+Option 4: Incorrect. Promises do not eliminate the need for callbacks entirely, but they provide a more structured and readable way to handle asynchronous operations compared to callbacks.
+So, the correct answer is Promises simplify error handling in asynchronous code.
+
+Let me know if you need further clarification!
+
+User
+Q4. Async JS 1: Rejecting promises
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+Which method is used to reject a promise with a reason?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+Promise.resolve()
+Promise.reject()
+Promise.catch()
+Promise.finally()
+ChatGPT
+Let's break down this question:
+
+Q4. Async JS 1: Rejecting promises
+
+Question: Which method is used to reject a promise with a reason?
+
+Options:
+
+Promise.resolve()
+Promise.reject()
+Promise.catch()
+Promise.finally()
+Explanation:
+
+Promise.resolve(): This method is used to create a resolved promise with a specified value.
+Promise.reject(): This method is used to create a rejected promise with a specified reason.
+Promise.catch(): This method is used to handle errors in promises, not for rejecting promises.
+Promise.finally(): This method is used to execute code after a promise is settled, regardless of its outcome.
+So, the correct answer is Promise.reject().
+
+Let me know if you have further questions!
+
+User
+Q5. Async JS 1: Purpose of async
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+What does the "async" keyword do when used before a function definition?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+It makes the function run asynchronously.
+It automatically converts the function into a promise.
+It ensures the function is executed before other asynchronous code.
+It enables the use of the "await" keyword inside the function.
+ChatGPT
+Let's dissect the question:
+
+Q5. Async JS 1: Purpose of async
+
+Question: What does the "async" keyword do when used before a function definition?
+
+Options:
+
+It makes the function run asynchronously.
+It automatically converts the function into a promise.
+It ensures the function is executed before other asynchronous code.
+It enables the use of the "await" keyword inside the function.
+Explanation:
+
+Option 1: Incorrect. The async keyword does not make the function run asynchronously by itself. It enables asynchronous behavior by allowing the use of the await keyword inside the function.
+Option 2: Correct. When the async keyword is used before a function definition, it automatically converts the function into a promise. The function will always return a promise, either resolved with the return value of the function or rejected with an exception thrown from within the function.
+Option 3: Incorrect. The async keyword doesn't ensure the function is executed before other asynchronous code. It only affects the behavior of the function itself.
+Option 4: Incorrect. While using async does enable the use of the await keyword inside the function, it doesn't specifically enable this feature. It's more about the function returning a promise.
+So, the correct answer is It automatically converts the function into a promise.
+
+Let me know if you need further clarification!
+
+User
+Explanation: The “async” keyword, when used before a function definition, enables the use of the “await” keyword inside the function. It allows the function to pause execution and wait for promises to resolve or reject.
+
+ChatGPT
+That's a concise and accurate explanation!
+
+Explanation: The “async” keyword, when used before a function definition, enables the use of the “await” keyword inside the function. It allows the function to pause execution and wait for promises to resolve or reject. This asynchronous behavior is what allows asynchronous code to be written in a more synchronous style, improving readability and maintainability.
+
+Let me know if you need further assistance!
+
+User
+correct is this It enables the use of the "await" keyword inside the function.
+ChatGPT
+You're correct. Let's revise the explanation to match the correct option:
+
+Explanation: The “async” keyword, when used before a function definition, enables the use of the “await” keyword inside the function. It allows the function to pause execution and wait for promises to resolve or reject. This enables asynchronous behavior within the function, making it possible to write asynchronous code in a more synchronous style.
+
+Thanks for the correction! If you have any more questions or need further assistance, feel free to ask.
+
+User
+Q6. Async JS 1: Combining results
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+Which method is used to combine the results of multiple promises into a single promise?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+Promise.combine()
+Promise.merge()
+Promise.all()
+Promise.race()
+ChatGPT
+Let's analyze the question:
+
+Q6. Async JS 1: Combining results
+
+Question: Which method is used to combine the results of multiple promises into a single promise?
+
+Options:
+
+Promise.combine()
+Promise.merge()
+Promise.all()
+Promise.race()
+Explanation:
+
+Promise.combine(): There is no built-in method called Promise.combine() in JavaScript for combining the results of multiple promises.
+Promise.merge(): There is no built-in method called Promise.merge() in JavaScript for combining the results of multiple promises.
+Promise.all(): This method is used to combine the results of multiple promises into a single promise. It waits for all promises to be resolved and returns an array of their results.
+Promise.race(): This method is used to race multiple promises against each other and returns the value or reason of the first promise that settles.
+So, the correct answer is Promise.all().
+
+Let me know if you have any further questions!
+
+User
+Q7. Async JS 1: No catch() is used
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+What happens if a promise is rejected and no "catch()" method is called on it?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+The program crashes.
+The promise remains in a pending state.
+The error is silently ignored.
+An unhandled promise rejection error is thrown.
+ChatGPT
+Let's break down this question:
+
+Q7. Async JS 1: No catch() is used
+
+Question: What happens if a promise is rejected and no "catch()" method is called on it?
+
+Options:
+
+The program crashes.
+The promise remains in a pending state.
+The error is silently ignored.
+An unhandled promise rejection error is thrown.
+Explanation:
+
+Option 1: Incorrect. JavaScript won't crash due to an unhandled promise rejection.
+Option 2: Incorrect. If a promise is rejected and no catch() method is called, the promise will still be in a settled state (rejected), not pending.
+Option 3: Incorrect. In most cases, errors should not be silently ignored, especially in asynchronous code.
+Option 4: Correct. If a promise is rejected and no catch() method is called, an unhandled promise rejection error is thrown. This is to alert developers about unhandled errors in their code.
+So, the correct answer is An unhandled promise rejection error is thrown.
+
+Let me know if you need further clarification!
+
+User
+Q8. Async JS 1: Creating new promise
+Unsolved
+feature icon
+Using hints except Complete Solution is Penalty free now
+Use Hint
+Which method is used to create a new promise in JavaScript?
+
+Choose the correct answer from below:
+Your score for this problem will be decided based on your FIRST SUBMISSION ONLY
+Promise.new()
+new Promise()
+Promise.create()
+createPromise()
+ChatGPT
+Let's break down the question:
+
+Q8. Async JS 1: Creating new promise
+
+Question: Which method is used to create a new promise in JavaScript?
+
+Options:
+
+Promise.new()
+new Promise()
+Promise.create()
+createPromise()
+Explanation:
+
+Promise.new(): There's no method called Promise.new() for creating a new promise in JavaScript.
+new Promise(): This is the correct syntax for creating a new promise in JavaScript. It takes a function with two arguments, resolve and reject, as its parameter.
+Promise.create(): There's no method called Promise.create() for creating a new promise in JavaScript.
+createPromise(): There's no built-in method called createPromise() for creating a new promise in JavaScript.
+So, the correct answer is new Promise().
+
+Let me know if you need further clarifi
